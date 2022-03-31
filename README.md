@@ -30,3 +30,8 @@
 ## Hadoop & Spark
 
 ## Machine Learning
+
+
+## 참조
+* https://github.com/SKT-AI/KoGPT2
+* https://github.com/songys/Chatbot_data
