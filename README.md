@@ -1,20 +1,34 @@
 # 메타버스 가상 공간 속, KoGPT2 모델을 활용한 챗봇 (GPT2_Unity_Chatbot-with-kafka)  
 ✔ Unitiy 가상공간 속에서 KoGPT2 모델 기반의 챗봇을 카프카와 연동시켜 구현하였다.   
-✔ KoGPT2 모델이란, 주어진 단어를 통해 다음 단어를 예측하는 학습모델이다. 이는 문장 생성에 최적화되어 있다.
+✔ 
+✔ KoGPT2 모델이란, 주어진 단어를 통해 다음 단어를 예측하는 학습모델이다. 이는 문장 생성에 최적화되어 있다.   
+　　　   
+✔ 프로젝트 기간: 22/03/14 ~ 22/04/01   
 
 ## 사용 프로그램      
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Unity & Photon-a4c5f3?style=flat-square&logo=Unity&logoColor=black"/></a>
    <a href="/README.md#apache-kafka"><img src="https://img.shields.io/badge/Apache Kafka-ff9b3b?style=flat-square&logo=apache kafka&logoColor=white"/></a>
    <a href="/README.md#python-machine-learning"><img src="https://img.shields.io/badge/Python-52c72e?style=flat-square&logo=python&logoColor=white"/></a>
-   <a href="/README.md#apache-hadoop"><img src="https://img.shields.io/badge/Apache Hadoop-ffd966?style=flat-square&logo=apache hadoop&logoColor=black"/></a>
-   <a href="/README.md#apache-spark"><img src="https://img.shields.io/badge/Apache Spark-674ea7?style=flat-square&logo=apache spark&logoColor=white"/></a>
-   <a href="/README.md#"><img src="https://img.shields.io/badge/Elasticsearch-0762d7?style=flat-square&logo=Elasticsearch&logoColor=white"/></a>
-   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Logstash-f85c5c?style=flat-square&logo=logstash&logoColor=white"/></a>
-   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Kibana-8fce00?style=flat-square&logo=kibana&logoColor=white"/></a>   
+   <a href="/README.md#hadoop--spark"><img src="https://img.shields.io/badge/Apache Hadoop-ffd966?style=flat-square&logo=apache hadoop&logoColor=black"/></a>
+   <a href="/README.md#hadoop--spark"><img src="https://img.shields.io/badge/Apache Spark-674ea7?style=flat-square&logo=apache spark&logoColor=white"/></a>
+   <a href="/README.md#elasticsearch--kibana--logstash"><img src="https://img.shields.io/badge/Elasticsearch-0762d7?style=flat-square&logo=Elasticsearch&logoColor=white"/></a>
+   <a href="/README.md#elasticsearch--kibana--logstash"><img src="https://img.shields.io/badge/Logstash-f85c5c?style=flat-square&logo=logstash&logoColor=white"/></a>
+   <a href="/README.md#elasticsearch--kibana--logstash"><img src="https://img.shields.io/badge/Kibana-8fce00?style=flat-square&logo=kibana&logoColor=white"/></a>   
    
    
 ## 구현 기능  
-✔ Unity 가상공간에서    
+1️⃣ Unity 가상공간에서 다양한 캐릭터를 기반한 메타버스를 구현하였다. 캐릭터를 이동하며 마치 게임을 하는 듯한 시각적인 효과를 즐길 수    
+ 　　있다. 또한, 포털을 통해 웹사이트로 이동하는 기능도 구현하였다.   <br>
+2️⃣ 가상공간 속에서 머신러닝으로 학습된 챗봇과 일상, 감정대화를 나눌 수 있다.   <br>
+3️⃣ 클라이언트와 챗봇과의 대화는 Kafka를 통해 주고 받는다.   <br>
+4️⃣ 일정주기를 반복하여 대화한 내용을 Spark와 Hadoop에 저장한다. 저장한 데이터를 바탕으로 챗봇을 재학습시킨다.     <br>
+
+
+## 역할 분담
+🔹 김세진:   
+🔹 김예빈:   
+🔹 장규호:   
+🔹 장서현:    
 
 ## 구성도
 <img width="65%" src="https://user-images.githubusercontent.com/50973139/160983406-2f64d241-2593-45e1-b540-a86a5a3e6d50.png"/>
@@ -25,9 +39,9 @@
 |------|---|---|------|---|---|
 |Kafka broker|1|2.0GB|20GB|2.13|Vmware|
 |Kafka Producer 1|2|16.0GB|100GB|2.13|Vmware|
-|Kafka Consumer 1|3.60GHz|4.0GB|20GB|2.13|Vmware|
+|Kafka Consumer 1|1|4.0GB|20GB|2.13|Vmware|
 |Kafka Producer 2|1|1GB|20GB|2.13|Vmware|
-|Kafka Consumer 2|3.60GHz|1.0GB|20GB|2.13|Vmware|
+|Kafka Consumer 2|1|1.0GB|20GB|2.13|Vmware|
 |Spark master|4|16.0GB|422GB|3.1.3|컴퓨터|
 |Spark worker1|2|8.0GB|50GB|3.1.3|Vmware|
 |Spark worker2|2|8.0GB|50GB|3.1.3|Vmware|
@@ -51,12 +65,18 @@
 ## Apache Kafka
 |Topic|Producer|Consumer|Context|비고|
 |------|---|---|------|---|
-|Question|Unity Server|Machine learning test|클라이언트 질문|테스트2|
-|Answer|Machine learning test|Unity Server|챗봇 답변|테스트2|
-
-## Hadoop & Spark
+|bot_question|Unity Server|Machine learning test|클라이언트 질문|Question|
+|ChatbotA|Machine learning test|Unity Server|챗봇 답변|Answer|
+|ChatbotB|Machine learning test|Unity Server|챗봇 답변|Answer|
+|ChatbotC|Machine learning test|Unity Server|챗봇 답변|Answer|
 
 ## Python (Machine Learning)
+
+   
+## Hadoop & Spark
+
+## Elasticsearch & Kibana & Logstash
+
 
 
 ## 참조
