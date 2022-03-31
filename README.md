@@ -12,6 +12,8 @@
 |시스템|CPU|메모리|HDD|버전|비고|
 |------|---|---|------|---|---|
 |테스트1|테스트2|테스트3|테스트1|테스트2|테스트3|
-|테스트1|테스트2|테스트3|테스트1|테스트2|테스트3|
-|테스트1|테스트2|테스트3|테스트1|테스트2|테스트3|   
+|Kafka|테스트2|테스트3|테스트1|테스트2|Vmware Virtual Machine|
+|Hadoop|테스트2|테스트3|테스트1|테스트2|Vmware Virtual Machine|
+|spark|테스트2|테스트3|테스트1|테스트2|Vmware Virtual Machine|
+|Hadoop|테스트2|테스트3|테스트1|테스트2|Vmware Virtual Machine|
 ## Unity & Photon
