@@ -3,7 +3,7 @@
    
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Unity & Photon-a4c5f3?style=flat-square&logo=Unity&logoColor=black"/></a>
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/apache kafka-ff9b3b?style=flat-square&logo=apache kafka&logoColor=black"/></a>
-   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/python-52c72e?style=flat-square&logo=python&logoColor=white"/></a>
+   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/python-52c72e?style=flat-square&logo=python&logoColor=black"/></a>
 
 
 ## 구현 기능  
