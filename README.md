@@ -1,9 +1,11 @@
 # GPT2_Unity_Chatbot-with-kafka
-Unitiy 가상공간 속에서 GPT2 모델 기반의 챗봇을 카프카와 연동시켜 구현하였습니다.
+✔ Unitiy 가상공간 속에서 GPT2 모델 기반의 챗봇을 카프카와 연동시켜 구현하였습니다.
+<img src="https://img.shields.io/badge/Unity&Photon-000000?style=flat-square&logo=Unity&logoColor=a4c5f3"/>
 
-구현기능
 
-사용 프로그램
+# 구현기능
 
-시스템 (환경설정)
+# 사용 프로그램
+
+# 시스템 (환경설정)
 
