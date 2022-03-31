@@ -6,7 +6,7 @@
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Unity & Photon-a4c5f3?style=flat-square&logo=Unity&logoColor=black"/></a>
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Apache Kafka-ff9b3b?style=flat-square&logo=apache kafka&logoColor=white"/></a>
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Python-52c72e?style=flat-square&logo=python&logoColor=white"/></a>
-   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Apache Hadoop-ffd966?style=flat-square&logo=apache hadoop&logoColor=black"/></a>   
+   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Apache Hadoop-ffd966?style=flat-square&logo=apache hadoop&logoColor=black"/></a>
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Apache Spark-674ea7?style=flat-square&logo=apache spark&logoColor=white"/></a>
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Elasticsearch-0762d7?style=flat-square&logo=Elasticsearch&logoColor=white"/></a>
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Logstash-f85c5c?style=flat-square&logo=logstash&logoColor=white"/></a>
