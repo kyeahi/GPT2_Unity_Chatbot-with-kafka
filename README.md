@@ -29,10 +29,10 @@
 * 상세하게 적기   
 
 ## Apache Kafka
-|Topic|Producer|Consumer|context|비고|
+|Topic|Producer|Consumer|Context|비고|
 |------|---|---|------|---|
-|Question|Unity Server|AI trained set|테스트1|테스트2|
-|Answer|테스트2|Unity Server|테스트1|테스트2|
+|Question|Unity Server|Machine learning test|클라이언트 질문|테스트2|
+|Answer|Machine learning test|Unity Server|챗봇 답변|테스트2|
 
 ## Hadoop & Spark
 
