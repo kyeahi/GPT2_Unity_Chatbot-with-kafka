@@ -2,8 +2,8 @@
 ✔ Unitiy 가상공간 속에서 GPT2 모델 기반의 챗봇을 카프카와 연동시켜 구현하였습니다.   
    
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Unity & Photon-a4c5f3?style=flat-square&logo=Unity&logoColor=black"/></a>
-   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Python-ff9b3b?style=flat-square&logo=Python&logoColor=black"/></a>
-   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Unity&Photon-a4c5f3?style=flat-square&logo=Unity&logoColor=black"/></a>
+   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/apache kafka-ff9b3b?style=flat-square&logo=apache kafka&logoColor=black"/></a>
+   <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/python-52c72e?style=flat-square&logo=python&logoColor=black"/></a>
 
 
 ## 구현 기능  
