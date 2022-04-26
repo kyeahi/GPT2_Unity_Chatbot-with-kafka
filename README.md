@@ -3,6 +3,7 @@
 ✔ KoGPT2 모델이란, 주어진 단어를 통해 다음 단어를 예측하는 학습모델이다. 이는 문장 생성에 최적화되어 있다.   
 　　　   
 ✔ 프로젝트 기간: 22/03/14 ~ 22/04/01   
+✔ 최종 PPT 링크: https://drive.google.com/file/d/1zLnQs3izegjii2x778iMkhbLdDm77Y7-/view?usp=sharing
 
 ## 사용 프로그램      
    <a href="/README.md#unity--photon"><img src="https://img.shields.io/badge/Unity & Photon-a4c5f3?style=flat-square&logo=Unity&logoColor=black"/></a>
@@ -23,10 +24,10 @@
 
 
 ## 역할 분담
-🔹 김세진:   
-🔹 김예빈:   
-🔹 장규호:   
-🔹 장서현:    
+🔹 김세진: 딥러닝 코드를 Spark로 재학습 (sparkML), Hadoop 클러스터에 대용량 DB저장   
+🔹 김예빈: 인공지능 NLP AI 설계 및 학습, 채팅 내역으로 재학습 코드 구현, Kafka 데이터 송수신  
+🔹 장규호: Hadoop 클러스터에 대용량 DB저장, 학습 데이터셋 선정 및 추출 가공  
+🔹 장서현: Unity 환경 개발, Kafka 데이터 송수신, Photon 서버 클라이언트 환경 추가, ELK로 시각화   
 
 ## 구성도
 <img width="65%" src="https://user-images.githubusercontent.com/50973139/160983406-2f64d241-2593-45e1-b540-a86a5a3e6d50.png"/>
