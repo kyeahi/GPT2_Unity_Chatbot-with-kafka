@@ -13,10 +13,13 @@ import sys
 from io import BytesIO
 import joblib
 
+
+# Kafka Consumer
 consumer = KafkaConsumer(
     'bot_question',
     bootstrap_servers=['172.30.1.174:9092'])
 
+# Kafka Producer A, B, C
 producerA = KafkaProducer(
     bootstrap_servers=['172.30.1.174:9092'])
 producerB = KafkaProducer(
@@ -27,6 +30,8 @@ producerC = KafkaProducer(
 
 client_hdfs = InsecureClient('http://172.30.1.167' + ':9870')
 
+
+# KoNLPy Tokenizer
 Q_TKN = "<usr>"
 A_TKN = "<sys>"
 BOS = '</s>'
@@ -38,6 +43,8 @@ PAD = '<pad>'
 koGPT2_TOKENIZER = PreTrainedTokenizerFast.from_pretrained("skt/kogpt2-base-v2",
                                                            bos_token=BOS, eos_token=EOS, unk_token='<unk>',
                                                            pad_token=PAD, mask_token=MASK)
+
+# Queue
 botA_message_que = Queue()
 botB_message_que = Queue()
 botC_message_que = Queue()
@@ -58,7 +65,7 @@ def consume_bot_question(consumer):
             botC_message_que.put(question)
 
 
-def createDir(pt): #경로 있는지 확인하는 함수, pt에 생성하고자하는 경로를 넣어>줌
+def createDir(pt): #경로 있는지 확인하는 함수, pt에 생성하고자하는 경로를 넣어줌
     originPath = "/".join(pt.split('/')[:-1])
     targetPath = pt.split('/')[-1]
     fileList = client_hdfs.list(originPath)
@@ -107,14 +114,13 @@ def consumer_test(path, bot_queue, producer):
                     a += gen.replace("▁", " ")
 
 
-
+                # 종료
                 if q != 'quit':
                     #message_que.put(question)
                     data_que['Q'].append(q)
                     data_que['A'].append(a)
                     producer.send(topic=question['to'], key=question['from'].encode('utf-8'),  # topic=path
-                                  value=a.strip().encode('utf-8'))  # 값이 넘어
-가는 부분
+                                  value=a.strip().encode('utf-8'))  # 값이 넘어 가는 부분
                     print("Chatbot > {}".format(a.strip()))
                 else:
                     break
@@ -126,17 +132,17 @@ def consumer_test(path, bot_queue, producer):
         if question['to'] == path:
             dataframe=pd.DataFrame(data_que)
             #dataframe = pd.DataFrame(list(message_que.queue))
-            createDir('/Chatbot/dailydata/'+datetime.today().strftime('%m%d')) #경로가 없으면 생성하는 함수
+            createDir('/Chatbot/dailydata/'+datetime.today().strftime('%m%d')) # 경로가 없으면 생성하는 함수
             with client_hdfs.write('/Chatbot/dailydata/'+filename, overwrite=True, encoding='utf-8') as writer:
                 dataframe.to_csv(writer)
             print("finish!")
 
-        #message_que.clear() #queue의 내용을 전체 삭제
+        # message_que.clear() #queue의 내용을 전체 삭제
 
 
 
 
-# 들어오는 값 계속 받아줘서 ABC분배
+# 들어오는 값 계속 받아주어 ABC분배, Thread 
 thread_kafka_consume=threading.Thread(target=consume_bot_question,args=(consumer,))
 thread_kafka_consume.start()
 
