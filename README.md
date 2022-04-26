@@ -72,6 +72,10 @@
 
    
 ## Hadoop & Spark
+하둡안에 저장될 대화데이터 양식
+<img width="65%" src="https://user-images.githubusercontent.com/67016829/165250348-270f8218-6892-433a-8a8a-ac61a0a45393.png"/>
+
+
 
 ## Elasticsearch & Kibana & Logstash
 
