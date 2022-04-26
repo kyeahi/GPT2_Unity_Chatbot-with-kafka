@@ -25,7 +25,7 @@
 ## 역할 분담
 🔹 김세진:   
 🔹 김예빈:   
-🔹 장규호:   
+🔹 장규호: 학습데이터 추출, 가공, 적재 / 모델 재학습코드 수정 및 저장소 문제 처리  
 🔹 장서현:    
 
 ## 구성도
@@ -72,11 +72,10 @@
 
    
 ## Hadoop & Spark
-하둡안에 저장될 대화데이터 양식
+
 <img width="65%" src="https://user-images.githubusercontent.com/67016829/165250348-270f8218-6892-433a-8a8a-ac61a0a45393.png"/>
 
-
-
+하둡안에 저장될 대화데이터 양식
 ## Elasticsearch & Kibana & Logstash
 
 
