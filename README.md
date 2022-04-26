@@ -21,17 +21,17 @@
 2️⃣ 가상공간 속에서 머신러닝으로 학습된 챗봇과 일상, 감정대화를 나눌 수 있다.   <br>
 3️⃣ 클라이언트와 챗봇과의 대화는 Kafka를 통해 주고 받는다.   <br>
 4️⃣ 일정주기를 반복하여 대화한 내용을 Spark와 Hadoop에 저장한다. 저장한 데이터를 바탕으로 챗봇을 재학습시킨다.     <br>
-
-
+   
+   
 ## 역할 분담
 🔹 김세진: 딥러닝 코드를 Spark로 재학습 (sparkML), Hadoop 클러스터에 대용량 DB저장   
 🔹 김예빈: 인공지능 NLP AI 설계 및 학습, 채팅 내역으로 재학습 코드 구현, Kafka 데이터 송수신, PPT   
 🔹 장규호: Hadoop 클러스터에 대용량 DB저장, 학습 데이터셋 선정 및 추출 가공  
 🔹 장서현: Unity 환경 개발, Kafka 데이터 송수신, Photon 서버 클라이언트 환경 추가, ELK로 시각화   
-
+   
 ## 구성도
 <img width="65%" src="https://user-images.githubusercontent.com/50973139/160983406-2f64d241-2593-45e1-b540-a86a5a3e6d50.png"/>
-
+   
      
 ## 시스템 (환경설정)
 |시스템|CPU|메모리|HDD|프로그램 버전|비고|
@@ -54,13 +54,13 @@
 |Kibana|2|4.0GB|20GB|7.17.1|Vmware|
    
 🔹 Producer 1과 Consumer 1은 질문을 받을 때, Producer 2와 Consumer 2는 답변을 보낼 때 사용   
-
+   
 
 ## Unity & Photon
 * 어떤 기능을 사용하였는지, 어떤 언어를 사용했는디
 * 구현 기능이 무엇인지
 * 상세하게 적기   
-
+   
 ## Apache Kafka
 |Topic|Producer|Consumer|Context|비고|
 |------|---|---|------|---|
@@ -68,19 +68,20 @@
 |ChatbotA|Machine learning test|Unity Server|챗봇 답변|Answer|
 |ChatbotB|Machine learning test|Unity Server|챗봇 답변|Answer|
 |ChatbotC|Machine learning test|Unity Server|챗봇 답변|Answer|
-
+   
 ## Python (Machine Learning)
-
+스파크 폴더 내에 chatbot.py 파일 참조   
+   
    
 ## Hadoop & Spark
 하둡안에 저장될 대화데이터 양식
 <img width="65%" src="https://user-images.githubusercontent.com/67016829/165250348-270f8218-6892-433a-8a8a-ac61a0a45393.png"/>
 
-
+   
 
 ## Elasticsearch & Kibana & Logstash
 
-
+   
 
 ## 참조
 * https://github.com/SKT-AI/KoGPT2
