@@ -57,9 +57,9 @@
    
 
 ## Unity & Photon
-* 어떤 기능을 사용하였는지, 어떤 언어를 사용했는디
-* 구현 기능이 무엇인지
-* 상세하게 적기   
+* 
+* 
+*  
    
 ## Apache Kafka
 |Topic|Producer|Consumer|Context|비고|
